@@ -44,8 +44,8 @@
         padding: 0 16px;
         border-radius: 18px;
         background: linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
-        backdrop-filter: blur(10px) saturate(140%);
-        -webkit-backdrop-filter: blur(10px) saturate(140%);
+        backdrop-filter: blur(10px) saturate(300%);
+        -webkit-backdrop-filter: blur(10px) saturate(300%);
         border: 1px solid var(--tint-border);
         box-shadow: 0 10px 30px rgba(16,24,40,.18);
         z-index: 1000;
@@ -64,7 +64,7 @@
       .container{width:min(1200px,92%);margin-inline:auto}
 
       /* Hero */
-      .header-logo{width:100vw;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+      .header-logo{width:100%;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
       .header-logo img{width:100%;height:100%;object-fit:cover}
 
       /* About */
@@ -78,13 +78,14 @@
       .glass{
         position:relative;border-radius:var(--radius);background:var(--card);
         backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:var(--shadow);
+  background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
+        backdrop-filter:blur(30px) saturate(300%);
+        -webkit-backdrop-filter:blur(10px) saturate(300%);
+        border:1px solid var(--tint-border);
+        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
+        color:#f8fafc;
       }
-      .glass::before{
-        content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
-        background:linear-gradient(170deg, rgba(255,255,255,.55), rgba(255,255,255,.15));
-        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
-      }
+
       .about-card{padding:26px}
       .about-card h1{margin:0 0 8px;font-size:clamp(2rem,3.4vw,3.2rem)}
       .about-card p{margin:0 0 12px;line-height:1.75;font-weight:500}
@@ -92,10 +93,16 @@
       .owner img{width:120px;height:120px;border-radius:50%;object-fit:cover}
       .services-card{padding:22px}
       .services-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-      @media (max-width:620px){.services-list{grid-template-columns:1fr}}
+      @media (max-width:700px){.services-list{grid-template-columns:1fr}}
       .service{
-        display:flex;align-items:flex-start;gap:12px;padding:12px;
+        display:flex;align-items:flex-start;gap:2px;padding:8px;
         border-radius:12px;background:#fff;border:1px solid #e5e7eb;
+          background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
+        backdrop-filter:blur(8px) saturate(100%);
+        -webkit-backdrop-filter:blur(8px) saturate(100%);
+        border:1px solid var(--tint-border);
+        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
+        color:#f8fafc;
       }
       .service i{color:var(--primary)}
 
@@ -110,8 +117,8 @@
       #contact .contact-form{
         flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
         background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
-        backdrop-filter:blur(10px) saturate(140%);
-        -webkit-backdrop-filter:blur(10px) saturate(140%);
+        backdrop-filter:blur(10px) saturate(300%);
+        -webkit-backdrop-filter:blur(10px) saturate(300%);
         border:1px solid var(--tint-border);
         padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
         color:#f8fafc;
@@ -127,8 +134,8 @@
       #personal .contact-form{
         flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
         background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
-        backdrop-filter:blur(10px) saturate(140%);
-        -webkit-backdrop-filter:blur(10px) saturate(140%);
+        backdrop-filter:blur(10px) saturate(300%);
+        -webkit-backdrop-filter:blur(10px) saturate(300%);
         border:1px solid var(--tint-border);
         padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
         color:#f8fafc;
@@ -202,7 +209,7 @@
         flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
         background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
         backdrop-filter:blur(30px) saturate(300%);
-        -webkit-backdrop-filter:blur(10px) saturate(0%);
+        -webkit-backdrop-filter:blur(10px) saturate(300%);
         border:1px solid var(--tint-border);
         padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
         color:#f8fafc;
@@ -277,6 +284,7 @@
   }
 #about {
   min-height: 100vh;
+  width:100%;
   background:
     linear-gradient(180deg, #00000066, #00000055),
     url("assets/personal/IMG_0033.png") center/cover no-repeat fixed;
@@ -284,6 +292,7 @@
 
 #portfolio {
   min-height: 100vh;
+  width:100%;
   background:
     linear-gradient(180deg, #00000066, #00000055),
     url("assets/personal/IMG_0033.png") center/cover no-repeat fixed;
@@ -291,6 +300,7 @@
 
 #contact {
   min-height: 100vh;
+  width:100%;
   background:
     linear-gradient(180deg, #00000066, #00000055),
     url("assets/personal/IMG_0411.png") center/cover no-repeat fixed;
@@ -298,6 +308,7 @@
 
 #personal {
   min-height: 100vh;
+  width:100%;
   background:
     linear-gradient(180deg, #00000066, #00000055),
     url("assets/personal/IMG_0411.png") center/cover no-repeat fixed;
@@ -312,10 +323,10 @@
 .photo-card{
           flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
         background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
-        backdrop-filter:blur(3px) saturate(55%);
-        -webkit-backdrop-filter:blur(10px) saturate(0%);
+        backdrop-filter:blur(8px) saturate(300%);
+        -webkit-backdrop-filter:blur(10px) saturate(300%);
         border:1px solid var(--tint-border);
-        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgb(255, 255, 255);
+        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(255, 255, 255, 0.597);
 }
 
 .photo-card img{
@@ -612,8 +623,8 @@
 <section id="personal">
         <div class="container">
           <div class="section-title">
-            <h2>A bit about Myself</h2>
-            <p>Fun Facts</p>
+            <h2>A Bit About Myself</h2>
+            <p></p>
           </div>
 
           <div class="contact-flex">
@@ -660,9 +671,11 @@
 
   <figure class="photo-card">
 <div class="glass" style="max-width: 340px; margin: 0 auto;">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vsfRPqE5CJs?si=w2PxD3-yZH3wjvwu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <figcaption> Check out this timelapse where I helped my dad build a gazebo frame in 2 days</figcaption>
   <iframe
     height="454"
-    width="300"
+    width="100%"
     frameborder="0"
     allowtranspa  rency="true"
     scrolling="no"
@@ -675,12 +688,13 @@
 </div>
 
         </div>
+    <footer class="photo-card" style="display:flex;align-items:center;margin: 0 auto;">
+      <p style="text-align: center;margin: 0 auto;">© 2025 Jesus Quiroz. All rights reserved.</p>
+    </footer>
       </section>
     </main>
 
-    <footer>
-      <p>© 2025 Jesus Quiroz. All rights reserved.</p>
-    </footer>
+
 
     <!-- Mobile nav toggle JS -->
   <!-- Mobile nav toggle JS -->
@@ -751,6 +765,12 @@
       <iframe id="pdf-frame" src="" frameborder="0"></iframe>
     </div>
   </div>
+
+<script>
+  document.querySelectorAll('img:not(.header-logo img)').forEach(img => {
+    img.setAttribute('loading', 'lazy');
+  });
+</script>
+
 </body>
 </html>
-
