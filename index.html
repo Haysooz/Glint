@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <style>
       :root{
-        --primary:#323592; --primary-600:#272977; --ink:#0f172a; --muted:#334155;
+        --primary:#1b6ada; --primary-600:#272977; --ink:#0f172a; --muted:#334155;
         --card:rgba(255,255,255,.78); --shadow:0 14px 38px rgba(16,24,40,.12); --radius:16px;
         --band: rgba(17,17,17,.82);
         --tint-top: rgba(50,53,146,.18);
@@ -116,14 +116,32 @@
         padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
         color:#f8fafc;
       }
+
       #contact h3{margin-top:0;color:#f8fafc}
+      footer{background:var(--primary);color:#fff;text-align:center;padding:20px;margin-top:30px}
+     
+      #personal .contact-flex{
+        display:flex;gap:30px;justify-content:center;align-items:flex-start;
+        flex-wrap:wrap;margin-top:20px;
+      }
+      #personal .contact-form{
+        flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
+        background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
+        backdrop-filter:blur(10px) saturate(140%);
+        -webkit-backdrop-filter:blur(10px) saturate(140%);
+        border:1px solid var(--tint-border);
+        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
+        color:#f8fafc;
+      }
+
+      #personal h3{margin-top:0;color:#f8fafc}
       footer{background:var(--primary);color:#fff;text-align:center;padding:20px;margin-top:30px}
 
       .btn{
         display:inline-block;background:var(--primary);border:2px solid var(--primary);
         color:#fff;font-weight:700;padding:12px 18px;border-radius:14px;
       }
-      .btn:hover{background:var(--primary-600);border-color:var(--primary-600)}
+      .btn:hover{background:var(--primary-500);border-color:var(--primary-600)}
 
       /* Desktop nav */
       @media (min-width: 769px) {
@@ -181,13 +199,13 @@
         gap:18px;
       }
       .doc-card{
-        border-radius:16px;
-        background:#fff;
-        box-shadow:var(--shadow);
-        padding:18px 18px 16px;
-        display:flex;
-        flex-direction:column;
-        gap:8px;
+        flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
+        background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
+        backdrop-filter:blur(3px) saturate(55%);
+        -webkit-backdrop-filter:blur(10px) saturate(0%);
+        border:1px solid var(--tint-border);
+        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.18);
+        color:#f8fafc;
       }
       .doc-card h3{
         margin:0 0 4px;
@@ -268,7 +286,7 @@
   min-height: 100vh;
   background:
     linear-gradient(180deg, #00000066, #00000055),
-    url("assets/personal/IMG_E9370.JPG") center/cover no-repeat fixed;
+    url("assets/personal/IMG_0033.png") center/cover no-repeat fixed;
 }
 
 #contact {
@@ -278,6 +296,44 @@
     url("assets/personal/IMG_0411.png") center/cover no-repeat fixed;
 }
 
+#personal {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #00000066, #00000055),
+    url("assets/personal/IMG_0411.png") center/cover no-repeat fixed;
+}
+
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+}
+
+.photo-card{
+          flex:1 1 780px;min-width:min(760px,100%);max-width:900px;
+        background:linear-gradient(180deg, var(--tint-top), var(--tint-bottom));
+        backdrop-filter:blur(3px) saturate(55%);
+        -webkit-backdrop-filter:blur(10px) saturate(0%);
+        border:1px solid var(--tint-border);
+        padding:24px;border-radius:16px;box-shadow:0 10px 30px rgb(255, 255, 255);
+}
+
+.photo-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.photo-card figcaption{
+  padding:10px 12px;
+  font-size:.9rem;
+  color:#ffffff;
+}
+
+#link {
+  color: rgb(0, 0, 0);
+}
     </style>
   </head>
   <body id="top">
@@ -301,6 +357,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#personal">Personal Life</a></li>
           </ul>
         </nav>
 
@@ -550,6 +607,75 @@
           </div>
         </div>
       </section>
+
+
+<section id="personal">
+        <div class="container">
+          <div class="section-title">
+            <h2>A bit about Myself</h2>
+            <p>Fun Facts</p>
+          </div>
+
+          <div class="contact-flex">
+            <div class="contact-form">
+          
+              <p>
+                I'm the eldest of 5 siblings, first to graduate from college, help my dad with his construction work, enjoy hiking, love nature, and have ran a mile every single day since Jan 1st 2023.
+              <br> Check out this timelapse where I helped my dad build a gazebo frame in 2 days <a href="https://www.youtube.com/watch?v=yiVAs8gAgTc" target="_blank" rel="noopener" id="link">here</a>
+              </p>
+            </div>
+  
+        </div>
+          
+<div class="section-title">
+  <h2>Image Gallery</h2>
+  <p>Pictures of my life</p>
+</div>
+
+<div class="photo-grid">
+
+  <figure class="photo-card">
+    <img src="assets/personal/IMG_2448.PNG" alt="My family together">
+    <img src="assets/personal/IMG_3577.jpg">
+    <img src="assets/personal/LAVH5154.JPG">
+    <img src="assets/personal/IMG_7115.jpg">
+    <figcaption>My Family</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="assets/personal/IMG_1105.jpg">
+    <img src="assets/personal/JPYW7326.png" alt="Hiking in nature">
+    <img src="assets/personal/IMG_9809.jpg">
+    <img src="assets/personal/IMG_E9370.JPG">   
+    <figcaption>Hiking + nature = epic.</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+    <img src="assets/personal/IMG_1777.PNG">
+    <img src="assets/personal/IMG_1776.PNG">
+    <img src="assets/personal/IMG_5754.jpg">
+    <img src="assets/personal/IMG_1288.png">
+    <figcaption>Lab Pics!</figcaption>
+  </figure>
+
+  <figure class="photo-card">
+<div class="glass" style="max-width: 340px; margin: 0 auto;">
+  <iframe
+    height="454"
+    width="300"
+    frameborder="0"
+    allowtranspa  rency="true"
+    scrolling="no"
+    src="https://www.strava.com/athletes/42272899/latest-rides/7995c4cc604364a544bd84143ba0245a19672657"
+    style="border-radius: 16px; width: 100%;">
+  </iframe>
+</div>
+    <figcaption>Daily mile – streak since Jan 1st, 2023.</figcaption>
+  </figure>  
+</div>
+
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -627,4 +753,3 @@
   </div>
 </body>
 </html>
-
